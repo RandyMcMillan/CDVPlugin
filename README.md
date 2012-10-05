@@ -19,3 +19,14 @@
 
     ___FILEBASENAME___
 
+Create
+
+    ~/Library/Developer/Xcode/Templates/File Templates/ 
+
+if it doesn't exist
+
+
+Drop into: 
+ 
+    ~/Library/Developer/Xcode/Templates/File Templates/
+    
