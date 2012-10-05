@@ -29,4 +29,5 @@ if it doesn't exist
 Drop into: 
  
     ~/Library/Developer/Xcode/Templates/File Templates/
-    
+
+![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
