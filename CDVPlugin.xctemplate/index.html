@@ -27,7 +27,18 @@
                 /* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
                  see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
                  for more details -jm */
-                function onDeviceReady() {}
+                function onDeviceReady() {
+                    
+                    init('success');
+                    
+                }
+                
+                
+                function init (returnSuccess){
+                    
+                    window.plugins.___FILEBASENAME___.init(nativePluginResultHandler,nativePluginErrorHandler,returnSuccess);
+                    
+                }
                 
                 function buttonOne (returnSuccess){
                     

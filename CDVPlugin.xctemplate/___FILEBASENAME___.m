@@ -28,7 +28,7 @@
 
 - (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-    //    NSLog(@"___FILEBASENAME___.m LINE:32 - %@", k___FILEBASENAME___INIT);
+    NSLog(@"The ___FILEBASENAME___ init function was called!");
 
     NSString *callbackId = [arguments pop];
     // NSString *objectAtIndex0 = [arguments objectAtIndex:0];

@@ -1,3 +1,36 @@
+CDVPlugin
+===
+
+Cordova (iOS) Xcode Plugin Template
+---
+
+
+
+###Installation:
+    $ cd ~/Library/Developer/Xcode/Templates/File\ Templates
+    $ git clone https://github.com/RandyMcMillan/CDVPlugin.git
+
+![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
+
+###Usage:
+####Open your Cordova (iOS) Xcode Project
+
+* Press <COMMAND+n>    
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot2.png)  
+
+* RENAME your Plugin! (_Do not use CDVPlugin_)  
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot3.png)  
+
+* Copy the MyCDVPlugin.js file to your /www folder
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot4.png)
+    
+
+
+<br><br>
+
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
@@ -28,18 +61,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-    ___FILEBASENAME___
-
-Create
-
-    ~/Library/Developer/Xcode/Templates/File Templates/ 
-
-if it doesn't exist
-
-
-Drop into: 
- 
-    ~/Library/Developer/Xcode/Templates/File Templates/
-
-![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
