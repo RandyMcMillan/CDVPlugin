@@ -1,3 +1,34 @@
+CDVPlugin
+===
+
+Cordova (iOS) Xcode Plugin Template
+---
+
+
+
+###Installation:
+    $ cd ~/Library/Developer/Xcode/Templates/File\ Templates
+    $ git clone https://github.com/RandyMcMillan/CDVPlugin.git
+
+![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
+
+###Usage:
+####Open your Cordova (iOS) Xcode Project
+
+* Press <COMMAND+n>    
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot2.png)  
+
+* RENAME your Plugin! (_Do not use CDVPlugin_)  
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot3.png)  
+
+* Copy the MyCDVPlugin.js file to your /www folder
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot4.png)
+    
+      
+
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
