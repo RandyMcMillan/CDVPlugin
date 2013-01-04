@@ -27,6 +27,7 @@ Cordova (iOS) Xcode Plugin Template
 
     ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot4.png)
     
+[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVPlugin.xctemplate/index.html)
 
 
 <br><br>
