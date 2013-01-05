@@ -1,5 +1,19 @@
 #!/bin/bash
 set -e
+help () {
+    cat<<EOF
+
+Usage: configure [install|uninstall|upgrade|help]
+
+Commands:
+
+    install    installs from the git repo
+    uninstall  restores original system vim config
+    upgrade    clobbers existing setup and installs fresh from git
+    help       print this msg
+
+EOF
+}
 
 # copy in pathogen and then clone in bundles
 install () {
