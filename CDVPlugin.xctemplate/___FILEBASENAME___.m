@@ -16,6 +16,10 @@
  *   specific language governing permissions and limitations
  *   under the License.
  */
+//
+//  ___FILEBASENAME___
+//  CDVEmailComposer Template Created Jan 7 2013
+//  Copyright 2013 @RandyMcMillan
 
 #import <Cordova/CDVAvailability.h>
 #import <Cordova/CDVViewController.h>
@@ -28,72 +32,72 @@
 
 - (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-    NSLog(@"The ___FILEBASENAME___ init function was called!");
+	NSLog(@"The ___FILEBASENAME___ init function was called!");
 
-    NSString *callbackId = [arguments pop];
-    // NSString *objectAtIndex0 = [arguments objectAtIndex:0];
+	NSString *callbackId = [arguments pop];
+	// NSString *objectAtIndex0 = [arguments objectAtIndex:0];
 
-    CDVViewController   *mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-    NSString            *jsString = k___FILEBASENAME___INIT;
+	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+	NSString			*jsString = k___FILEBASENAME___INIT;
 
-    [mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
+	[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 
-    NSString        *resultType = [arguments objectAtIndex:0];
-    CDVPluginResult *result;
+	NSString		*resultType = [arguments objectAtIndex:0];
+	CDVPluginResult *result;
 
-    if ([resultType isEqualToString:@"success"]) {
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+	if ([resultType isEqualToString:@"success"]) {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
 
-        NSLog(@"callbackId = '%@'", callbackId);
-        [self writeJavascript:[result toSuccessCallbackString:callbackId]];
-    } else {
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+		NSLog(@"callbackId = '%@'", callbackId);
+		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
+	} else {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
 
-        NSLog(@"callbackId = '%@'", callbackId);
-        [self writeJavascript:[result toErrorCallbackString:callbackId]];
-    }
+		NSLog(@"callbackId = '%@'", callbackId);
+		[self writeJavascript:[result toErrorCallbackString:callbackId]];
+	}
 }
 
 - (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-    NSLog(@"Hello, this is a native function called from ___FILEBASENAME___!");
+	NSLog(@"Hello, this is a native function called from ___FILEBASENAME___!");
 
-    // get the callback id
-    NSString    *callbackId     = [arguments pop];
-    NSString    *objectAtIndex0 = [arguments objectAtIndex:0];
-    NSLog(@"objectAtIndex0 = '%@'", objectAtIndex0);
+	// get the callback id
+	NSString	*callbackId		= [arguments pop];
+	NSString	*objectAtIndex0 = [arguments objectAtIndex:0];
+	NSLog(@"objectAtIndex0 = '%@'", objectAtIndex0);
 
-    /*
-     *        NSString *objectAtIndex1 = [arguments objectAtIndex:1];
-     *        NSLog(@"objectAtIndex1 = '%@'",objectAtIndex1);
-     */
-    NSLog(@"k___FILEBASENAME___ALERT = %@", k___FILEBASENAME___ALERT);
+	/*
+	 *        NSString *objectAtIndex1 = [arguments objectAtIndex:1];
+	 *        NSLog(@"objectAtIndex1 = '%@'",objectAtIndex1);
+	 */
+	NSLog(@"k___FILEBASENAME___ALERT = %@", k___FILEBASENAME___ALERT);
 
-    CDVViewController *mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-    NSLog(@"mvc___FILEBASENAME___ = %@", mvc___FILEBASENAME___);
-    NSLog(@"mvc___FILEBASENAME___.view = %@", mvc___FILEBASENAME___.view);
-    NSLog(@"mvc___FILEBASENAME___.webView = %@", mvc___FILEBASENAME___.webView);
+	CDVViewController *mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+	NSLog(@"mvc___FILEBASENAME___ = %@", mvc___FILEBASENAME___);
+	NSLog(@"mvc___FILEBASENAME___.view = %@", mvc___FILEBASENAME___.view);
+	NSLog(@"mvc___FILEBASENAME___.webView = %@", mvc___FILEBASENAME___.webView);
 
-    //    mvc___FILEBASENAME___.webView.alpha = 0.5;
+	//    mvc___FILEBASENAME___.webView.alpha = 0.5;
 
-    NSString *jsString = k___FILEBASENAME___ALERT;
-    [mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
+	NSString *jsString = k___FILEBASENAME___ALERT;
+	[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 
-    NSString *resultType = [arguments objectAtIndex:0];
-    NSLog(@"%@", resultType);
-    CDVPluginResult *result;
+	NSString *resultType = [arguments objectAtIndex:0];
+	NSLog(@"%@", resultType);
+	CDVPluginResult *result;
 
-    if ([resultType isEqualToString:@"success"]) {
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+	if ([resultType isEqualToString:@"success"]) {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
 
-        NSLog(@"callbackId = '%@'", callbackId);
-        [self writeJavascript:[result toSuccessCallbackString:callbackId]];
-    } else {
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+		NSLog(@"callbackId = '%@'", callbackId);
+		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
+	} else {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
 
-        NSLog(@"callbackId = '%@'", callbackId);
-        [self writeJavascript:[result toErrorCallbackString:callbackId]];
-    }
+		NSLog(@"callbackId = '%@'", callbackId);
+		[self writeJavascript:[result toErrorCallbackString:callbackId]];
+	}
 }
 
 @end

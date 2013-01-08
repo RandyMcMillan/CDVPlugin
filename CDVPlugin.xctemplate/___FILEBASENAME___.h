@@ -16,11 +16,11 @@
  *   specific language governing permissions and limitations
  *   under the License.
  */
+//
+//  ___FILEBASENAME___
+//  CDVEmailComposer Template Created Jan 7 2013
+//  Copyright 2013 @RandyMcMillan
 
-// http://git-wip-us.apache.org/repos/asf?p=incubator-cordova-ios.git;a=blob;f=CordovaLib/Classes/CDVPlugin.h;h=658cfbd4bf65adff4a4a38413714c7fb4ae7d075;hb=HEAD
-//
-// http://git-wip-us.apache.org/repos/asf?p=incubator-cordova-ios.git;a=blob;f=CordovaLib/Classes/CDVPlugin.m;h=2ebf4ef786033e12fea63d1fc160760d42bf59cf;hb=HEAD
-//
 #import <Foundation/Foundation.h>
 
 #import <Cordova/CDVPlugin.h>
