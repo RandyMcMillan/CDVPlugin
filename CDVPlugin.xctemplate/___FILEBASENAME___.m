@@ -33,7 +33,26 @@
 - (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
 	NSLog(@"The ___FILEBASENAME___ init function was called!");
-
+    if (self.hasPendingOperation) {
+        NSLog(@"%@.hasPendingOperation = YES",[self class]);
+    }else{
+        NSLog(@"%@.hasPendingOperation = NO",[self class]);
+    }
+    
+    NSString* systemVersion = [[UIDevice currentDevice] systemVersion];
+	BOOL isLessThaniOS4 = ([systemVersion compare:@"4.0" options:NSNumericSearch] == NSOrderedAscending);
+	BOOL isGreaterThaniOS4 = ([systemVersion compare:@"4.0" options:NSNumericSearch] == NSOrderedDescending);
+	BOOL isLessThaniOS5 = ([systemVersion compare:@"5.0" options:NSNumericSearch] == NSOrderedAscending);
+	BOOL isGreaterThaniOS5 = ([systemVersion compare:@"5.0" options:NSNumericSearch] == NSOrderedDescending);
+	BOOL isLessThaniOS6 = ([systemVersion compare:@"6.0" options:NSNumericSearch] == NSOrderedAscending);
+	BOOL isEqualToiOS6 = ([systemVersion compare:@"6.0" options:NSNumericSearch] == NSOrderedSame);
+	BOOL isGreaterThaniOS6 = ([systemVersion compare:@"6.0" options:NSNumericSearch] == NSOrderedDescending);
+	if (isLessThaniOS4 && isLessThaniOS5){}
+	if ( isGreaterThaniOS4 && isLessThaniOS5){}
+	if ( isGreaterThaniOS5 && isLessThaniOS6){}
+    if (isEqualToiOS6) {NSLog(@"isEqualToiOS6");}
+	if ( isGreaterThaniOS6){NSLog(@"isGreaterThaniOS6");};
+    
 	NSString *callbackId = [arguments pop];
 	// NSString *objectAtIndex0 = [arguments objectAtIndex:0];
 
@@ -46,12 +65,12 @@
 	CDVPluginResult *result;
 
 	if ([resultType isEqualToString:@"success"]) {
-		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success!"];
 
 		NSLog(@"callbackId = '%@'", callbackId);
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
 	} else {
-		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'!"];
 
 		NSLog(@"callbackId = '%@'", callbackId);
 		[self writeJavascript:[result toErrorCallbackString:callbackId]];
@@ -99,5 +118,12 @@
 		[self writeJavascript:[result toErrorCallbackString:callbackId]];
 	}
 }
+
+
+- (void)handleOpenURL:(NSNotification*)notification{NSLog(@"%@ handleOpenURL!",[self class]);}
+- (void)onAppTerminate{NSLog(@"%@ onAppTerminate!",[self class]);}
+- (void)onMemoryWarning{NSLog(@"%@ onMemoryWarning!",[self class]);}
+- (void)onReset{NSLog(@"%@ onReset!",[self class]);}
+- (void)dispose{NSLog(@"%@ dispose!",[self class]);}
 
 @end
