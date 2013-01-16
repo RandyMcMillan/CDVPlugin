@@ -28,5 +28,6 @@
 extern NSString *const k___FILEBASENAME___INIT;
 
 extern NSString *const k___FILEBASENAME___ALERT;
+extern NSString *const k___FILEBASENAME___FUNCTION;
 
 @end

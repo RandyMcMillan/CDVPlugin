@@ -35,7 +35,7 @@
 
 - (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-	NSLog(@"The ___FILEBASENAME___ init function was called!");
+	NSLog(@"init called from %@!", [self class]);
 
 	if (self.hasPendingOperation) {
 		NSLog(@"%@.hasPendingOperation = YES", [self class]);
@@ -66,39 +66,31 @@
 		NSLog(@"isGreaterThaniOS6");
 	}
 
-	NSString *callbackId = [arguments pop];
-	// NSString *objectAtIndex0 = [arguments objectAtIndex:0];
-
-	NSString		*resultType = [arguments objectAtIndex:0];
-	CDVPluginResult *result;
-
-	if ([resultType isEqualToString:@"success"]) {
-		CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-		NSString			*jsString = k___FILEBASENAME___INIT;
-
+	NSString	*callbackId		= [arguments pop];
+	NSString	*objectAtIndex0 = [arguments objectAtIndex:0];
+    
+	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+	CDVPluginResult		*result;
+    
+	if ([objectAtIndex0 isEqualToString:@"success"]) {
+		NSString *jsString = k___FILEBASENAME___INIT;
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
-
-		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success!"];
-
-		NSLog(@"callbackId = '%@'", callbackId);
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___INIT was evaluated by webview and created alert!"];
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
-	} else {
-		CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-		NSString			*jsString = k___FILEBASENAME___INIT;
-
-		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
-
-		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'!"];
-
-		NSLog(@"callbackId = '%@'", callbackId);
-		[self writeJavascript:[result toErrorCallbackString:callbackId]];
-	}
+	} else { NSLog(@"[arguments objectAtIndex:0] = %@",[arguments objectAtIndex:0]);}
+    
 }
 
 - (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
 	NSLog(@"nativeFunction called from %@!", [self class]);
 
+    if (self.hasPendingOperation) {
+		NSLog(@"%@.hasPendingOperation = YES", [self class]);
+	} else {
+		NSLog(@"%@.hasPendingOperation = NO", [self class]);
+	}
+    
 	NSString	*callbackId		= [arguments pop];
 	NSString	*objectAtIndex0 = [arguments objectAtIndex:0];
 
