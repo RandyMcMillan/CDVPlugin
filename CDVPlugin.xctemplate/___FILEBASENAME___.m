@@ -69,35 +69,26 @@
 	NSString *callbackId = [arguments pop];
 	// NSString *objectAtIndex0 = [arguments objectAtIndex:0];
 
-
 	NSString		*resultType = [arguments objectAtIndex:0];
 	CDVPluginResult *result;
 
 	if ([resultType isEqualToString:@"success"]) {
+		CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+		NSString			*jsString = k___FILEBASENAME___INIT;
 
+		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 
-	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-	NSString			*jsString = k___FILEBASENAME___INIT;
-
-	[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
-		
-        
-        
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success!"];
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success!"];
 
 		NSLog(@"callbackId = '%@'", callbackId);
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
 	} else {
-		
-        
-	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
-	NSString			*jsString = k___FILEBASENAME___INIT;
+		CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+		NSString			*jsString = k___FILEBASENAME___INIT;
 
-	[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
-        
-        
-        
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'!"];
+		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
+
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"resultType = 'error'!"];
 
 		NSLog(@"callbackId = '%@'", callbackId);
 		[self writeJavascript:[result toErrorCallbackString:callbackId]];
