@@ -15,12 +15,14 @@
  *   KIND, either express or implied.  See the License for the
  *   specific language governing permissions and limitations
  *   under the License.
+ *
+ *      ___FILEBASENAME___
+ *      ___FILEBASENAME___ Template Created ___DATE___.
+ *      Copyright 2013 @RandyMcMillan
+ *
+ *     Created by ___FULLUSERNAME___ on ___DATE___.
+ *     Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
  */
-//
-//  ___FILEBASENAME___
-//  CDVEmailComposer Template Created Jan 7 2013
-//  Copyright 2013 @RandyMcMillan
-//
 
 #import "___FILEBASENAME____JS.h"
 

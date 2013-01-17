@@ -97,7 +97,7 @@
 	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
 	CDVPluginResult		*result;
 
-	if ([objectAtIndex0 isEqualToString:@"success"]) {
+	if ([objectAtIndex0 isEqualToString:@"literalString"]) {
 		NSString *jsString = k___FILEBASENAME___ALERT;
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
