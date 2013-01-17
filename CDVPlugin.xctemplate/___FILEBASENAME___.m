@@ -75,7 +75,7 @@
 	if ([objectAtIndex0 isEqualToString:@"success"]) {
 		NSString *jsString = k___FILEBASENAME___INIT;
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
-		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___INIT was evaluated by webview and created alert!"];
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___INIT was evaluated by webview!"];
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
 	} else { NSLog(@"[arguments objectAtIndex:0] = %@",[arguments objectAtIndex:0]);}
     
@@ -106,7 +106,7 @@
 }
 - (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-	NSLog(@"nativeFunctionW called from %@!", [self class]);
+	NSLog(@"nativeFunction called from %@!", [self class]);
     
     if (self.hasPendingOperation) {
 		NSLog(@"%@.hasPendingOperation = YES", [self class]);

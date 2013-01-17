@@ -34,34 +34,82 @@
                 }
                 
                 
-                function init (returnSuccess){
+                function init (object){
                     
-                    window.plugins.___FILEBASENAME___.init(nativePluginResultHandler,nativePluginErrorHandler,returnSuccess);
-                    
-                }
-                
-                function buttonOne (returnSuccess){
-                    
-                    window.plugins.___FILEBASENAME___.callNativeFunction(nativePluginResultHandler,nativePluginErrorHandler,returnSuccess);
-                    
-                }
-                function buttonTwo (returnSuccess){
-                    
-                    window.plugins.___FILEBASENAME___.callNativeFunction(nativePluginResultHandler,nativePluginErrorHandler,returnSuccess);
+                    window.plugins.___FILEBASENAME___.init(nativePluginResultHandler,nativePluginErrorHandler,object);
                     
                 }
                 
-                function nativePluginResultHandler (result) {}
-                function nativePluginErrorHandler (error) {}
+                function buttonOne (object){
+                    
+                    window.plugins.___FILEBASENAME___.callNativeFunctionWithAlert(nativePluginResultHandler,nativePluginErrorHandler,object);
+                    
+                }
+                
+                function buttonTwo (object){
+                    
+                    window.plugins.___FILEBASENAME___.callNativeFunction(nativePluginResultHandler,nativePluginErrorHandler,object);
+                    
+                }
+                
+                function nativePluginResultHandler (result) {
+                    
+                    console.log(result);
+                }
+                
+                function nativePluginErrorHandler (error) {
+                    
+                    console.log(error);
+                }
+                
+                function alertDismissed(){console.log('alertDismissed function twiggered!');}
+                
+                function helpButton(){
+                    console.log('take a break!');
+                    window.open('http://www.youtube.com/watch?v=wugY6HNLOCo&autoplay=1', '_blank', 'location=yes');
+                }
+                
                 
                 
                 </script>
+            <style media="only screen and (max-device-width: 1024px)" type="text/css">
+                
+                
+                body {background-color:#cfd3db;table-layout: auto;}
+                report{font-size: 5pt;}
+                button { color: gray;width: 90%;margin-left: 5%; }
+                table {min-width: 86%; margin:0%}
+                th {font-size: smaller}
+                td{width: 33%;}
+                </style>
+            <style media="only screen and (max-device-width: 480px)" type="text/css">
+                
+                body {background-color:#cfd3db;table-layout: auto;}
+                report{font-size: 5pt;}
+                button { color: gray;width: 90%;margin-left: 5%; }
+                table {min-width: 86%; margin:0%}
+                th {font-size: smaller}
+                td{width: 33%;}
+                </style>
+            
+            
+            
+            <style media="only screen and (min-device-width: 1024px)" type="text/css" >
+                body {background-color:#cfd3db;table-layout: auto;}
+                report{font-size: 5pt;}
+                button { color: gray;width: 90%;margin-left: 5%; }
+                table {min-width: 86%; margin:0%}
+                th {font-size: smaller}
+                td{width: 33%;}
+                </style>
             </head>
     <body onload="onBodyLoad()">
-        <h1>Hey, it's Cordova!</h1>
+        <div class="report" id="report">___FILEBASENAME___</div>
+        <button onclick="init('success');">init!</button><br><div id="init" class="button"></div>
+        <button onclick="buttonOne('literalString');">nativeFunctionWithAlert!</button><br><div class="button"></div>
+        <button onclick="buttonTwo('literalString');">nativeFunction!</button><br><div class="button"></div>
         
-        <button onclick="buttonOne('success');">Click to invoke the ___FILEBASENAME___ with an SUCCESS!</button>
-        <button onclick="buttonTwo('error');">Click to invoke the ___FILEBASENAME___ with an ERROR!</button>
+        <button onclick="helpButton();">Help</button><br><div class="button"></div>
         
     </body>
 </html>

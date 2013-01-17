@@ -25,67 +25,53 @@
  */
 
 (function() {
-
-var cordovaRef = window.PhoneGap || window.Cordova || window.cordova; // old to new fallbacks
-
-function ___FILEBASENAME___(){}
-
-
-
-___FILEBASENAME___.prototype.init = function(success, fail, object) {
-
-    cordovaRef.exec(success, fail, "___FILEBASENAME___", "init", [object]);
-
-}
-
-
-
-
-___FILEBASENAME___.prototype.callNativeFunction = function(success, fail, object) {
-
-    cordovaRef.exec(success, fail, "___FILEBASENAME___", "nativeFunction", [object]);
-
-}
-
-
-___FILEBASENAME___.prototype.nativePluginResultHandler = function( result ) { console.log(success); }
-
-
-___FILEBASENAME___.prototype.nativePluginErrorHandler = function( error ) { console.log(error); }
-
-
-
-___FILEBASENAME___.install = function()
-{
-    if ( !window.plugins ) {
-        window.plugins = {};
-    }
-    if ( !window.plugins.___FILEBASENAME___ ) {
-        window.plugins.___FILEBASENAME___ = new ___FILEBASENAME___();
-    }
-}
-
-if (cordovaRef && cordovaRef.addConstructor) {
-    cordovaRef.addConstructor(___FILEBASENAME___.install);
-} else {
-    console.log("___FILEBASENAME___ Cordova Plugin could not be installed.");
-    return null;
-}
-
-
-})();
-
-
-/*
-var ___FILEBASENAME___ = {
-    
-    callNativeFunction: function (success, fail, resultType) {
-        return cordova.exec(success, fail, "___FILEBASENAME___", "nativeFunction", [resultType]);
-    }
-}
-*/
-
-
-
-
-
+ 
+ var cordovaRef = window.PhoneGap || window.Cordova || window.cordova; // old to new fallbacks
+ 
+ function ___FILEBASENAME___(){}
+ 
+ 
+ ___FILEBASENAME___.prototype.init = function(success, fail, object) {
+ 
+ cordovaRef.exec(success, fail, "___FILEBASENAME___", "init", [object]);
+ 
+ }
+ 
+ ___FILEBASENAME___.prototype.callNativeFunctionWithAlert = function(success, fail, object) {
+ 
+ cordovaRef.exec(success, fail, "___FILEBASENAME___", "nativeFunctionWithAlert", [object]);
+ 
+ }
+ 
+ ___FILEBASENAME___.prototype.callNativeFunction = function(success, fail, object) {
+ 
+ cordovaRef.exec(success, fail, "___FILEBASENAME___", "nativeFunction", [object]);
+ 
+ }
+ 
+ ___FILEBASENAME___.prototype.nativePluginResultHandler = function( result ) { console.log(success); }
+ 
+ 
+ ___FILEBASENAME___.prototype.nativePluginErrorHandler = function( error ) { console.log(error); }
+ 
+ 
+ 
+ ___FILEBASENAME___.install = function()
+ {
+ if ( !window.plugins ) {
+ window.plugins = {};
+ }
+ if ( !window.plugins.___FILEBASENAME___ ) {
+ window.plugins.___FILEBASENAME___ = new ___FILEBASENAME___();
+ }
+ }
+ 
+ if (cordovaRef && cordovaRef.addConstructor) {
+ cordovaRef.addConstructor(___FILEBASENAME___.install);
+ } else {
+ console.log("___FILEBASENAME___ Cordova Plugin could not be installed.");
+ return null;
+ }
+ 
+ 
+ })();
