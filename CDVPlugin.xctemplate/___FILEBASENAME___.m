@@ -81,9 +81,9 @@
     
 }
 
-- (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
+- (void)nativeFunctionWithAlert:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
-	NSLog(@"nativeFunction called from %@!", [self class]);
+	NSLog(@"nativeFunctionWithAlert called from %@!", [self class]);
 
     if (self.hasPendingOperation) {
 		NSLog(@"%@.hasPendingOperation = YES", [self class]);
@@ -104,6 +104,30 @@
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
 	} else { NSLog(@"[arguments objectAtIndex:0] = %@",[arguments objectAtIndex:0]);}
 }
+- (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
+{
+	NSLog(@"nativeFunctionW called from %@!", [self class]);
+    
+    if (self.hasPendingOperation) {
+		NSLog(@"%@.hasPendingOperation = YES", [self class]);
+	} else {
+		NSLog(@"%@.hasPendingOperation = NO", [self class]);
+	}
+    
+	NSString	*callbackId		= [arguments pop];
+	NSString	*objectAtIndex0 = [arguments objectAtIndex:0];
+    
+	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
+	CDVPluginResult		*result;
+    
+	if ([objectAtIndex0 isEqualToString:@"literalString"]) {
+		NSString *jsString = k___FILEBASENAME___FUNCTION;
+		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___FUNCTION was evaluated by webview!"];
+		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
+	} else { NSLog(@"[arguments objectAtIndex:0] = %@",[arguments objectAtIndex:0]);}
+}
+
 
 - (void)handleOpenURL:(NSNotification *)notification
 {

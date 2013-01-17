@@ -31,6 +31,7 @@
 @interface ___FILEBASENAME___ : CDVPlugin {}
 
 - (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+- (void)nativeFunctionWithAlert:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 - (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 
 @end
