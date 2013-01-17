@@ -1,4 +1,3 @@
-..
 CDVPlugin
 ===
 
