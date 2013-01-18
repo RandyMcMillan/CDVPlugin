@@ -41,25 +41,34 @@
                 }
                 
                 function buttonOne (object){
-                    
-                    window.plugins.___FILEBASENAME___.callNativeFunctionWithAlert(nativePluginResultHandler,nativePluginErrorHandler,object);
+                    //prototyped result and error handlers in ___FILEBASENAME___.js
+                    window.plugins.___FILEBASENAME___.callNativeFunctionWithAlert(window.plugins.___FILEBASENAME___.nativePluginResultHandler,window.plugins.___FILEBASENAME___.nativePluginErrorHandler,object);
                     
                 }
                 
                 function buttonTwo (object){
+                    //prototyped result and error handlers in ___FILEBASENAME___.js
+                    window.plugins.___FILEBASENAME___.callNativeFunction(window.plugins.___FILEBASENAME___.nativePluginResultHandler,window.plugins.___FILEBASENAME___.nativePluginErrorHandler,object);
                     
+                }
+                
+                function buttonThree (object){
+                    window.plugins.___FILEBASENAME___.callNativeFunctionWithAlert(nativePluginResultHandler,nativePluginErrorHandler,object);
+                }
+                
+                function buttonFour (object){
                     window.plugins.___FILEBASENAME___.callNativeFunction(nativePluginResultHandler,nativePluginErrorHandler,object);
-                    
                 }
                 
-                function nativePluginResultHandler (result) {
+                
+                function nativePluginResultHandler (object) {
                     
-                    console.log(result);
+                    console.log(object);
                 }
                 
-                function nativePluginErrorHandler (error) {
+                function nativePluginErrorHandler (object) {
                     
-                    console.log(error);
+                    console.log(object);
                 }
                 
                 function alertDismissed(){console.log('alertDismissed function twiggered!');}
@@ -106,8 +115,11 @@
     <body onload="onBodyLoad()">
         <div class="report" id="report">___FILEBASENAME___</div>
         <button onclick="init('success');">init!</button><br><div id="init" class="button"></div>
-        <button onclick="buttonOne('literalString');">nativeFunctionWithAlert!</button><br><div class="button"></div>
-        <button onclick="buttonTwo('literalString');">nativeFunction!</button><br><div class="button"></div>
+        <button onclick="buttonOne('literalString');">nativeFunctionWithAlert! (prototyped return)</button><br><div class="button"></div>
+        <button onclick="buttonTwo('literalString');">nativeFunction! (prototyped return)</button><br><div class="button"></div>
+        
+        <button onclick="buttonThree('literalString');">nativeFunctionWithAlert!</button><br><div class="button"></div>
+        <button onclick="buttonFour('literalString');">nativeFunction!</button><br><div class="button"></div>
         
         <button onclick="helpButton();">Help</button><br><div class="button"></div>
         

@@ -49,10 +49,10 @@
  
  }
  
- ___FILEBASENAME___.prototype.nativePluginResultHandler = function( result ) { console.log(success); }
+ ___FILEBASENAME___.prototype.nativePluginResultHandler = function(object) { console.log(object+' prototyped callback'); }
  
  
- ___FILEBASENAME___.prototype.nativePluginErrorHandler = function( error ) { console.log(error); }
+ ___FILEBASENAME___.prototype.nativePluginErrorHandler = function(object) { console.log(object+' prototyped callback'); }
  
  
  
