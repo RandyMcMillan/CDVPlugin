@@ -30,10 +30,10 @@
 
 // Remove line breaks/returns to use as one constant string!
 // Yes you can inject self executing functions into the webView!
-NSString *const k___FILEBASENAME___INIT = @"(function() {console.log('k___FILEBASENAME___INIT evaluated!');})();";
+NSString *const k___FILEBASENAME___INIT		= @"(function() {console.log('k___FILEBASENAME___INIT evaluated!');})();";
 NSString *const k___FILEBASENAME___FUNCTION = @"(function() {console.log('k___FILEBASENAME___FUNCTION evaluated!');})();";
-//REF http://docs.phonegap.com/en/2.3.0/cordova_notification_notification.md.html#Notification
-//NSString *const k___FILEBASENAME___ALERT = @"navigator.notification.alert('Cordova  ___FILEBASENAME___ Plugin is working!')";
-  NSString *const k___FILEBASENAME___ALERT = @"window.alert('MESSAGE ___FILEBASENAME____JS.m LINE:37',alertDismissed,'Event Create & Saved','OK');";
+// REF http://docs.phonegap.com/en/2.3.0/cordova_notification_notification.md.html#Notification
+// NSString *const k___FILEBASENAME___ALERT = @"navigator.notification.alert('Cordova  ___FILEBASENAME___ Plugin is working!')";
+NSString *const k___FILEBASENAME___ALERT = @"window.alert('MESSAGE ___FILEBASENAME____JS.m LINE:37',alertDismissed,'Event Create & Saved','OK');";
 
 @end

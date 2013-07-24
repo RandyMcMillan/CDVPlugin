@@ -33,31 +33,30 @@
 
 @implementation ___FILEBASENAME___
 
-
 /*
- 
- - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
- {
- // Check command.arguments here.
- [self.commandDelegate runInBackground:^{
- NSString* payload = nil;
- // Some blocking logic...
- CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
- // The sendPluginResult method is thread-safe.
- [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
- }];
- }
- 
+ *
+ *   - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+ *   {
+ *   // Check command.arguments here.
+ *   [self.commandDelegate runInBackground:^{
+ *   NSString* payload = nil;
+ *   // Some blocking logic...
+ *   CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+ *   // The sendPluginResult method is thread-safe.
+ *   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+ *   }];
+ *   }
+ *
  */
-- (void)init:(CDVInvokedUrlCommand*)command
+- (void)init:(CDVInvokedUrlCommand *)command
 {
 	NSLog(@"init called from %@!", [self class]);
 
 	if (self.hasPendingOperation) {
-        //        [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
-        NSLog(@"%@.hasPendingOperation = YES", [self class]);
+		//        [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+		NSLog(@"%@.hasPendingOperation = YES", [self class]);
 	} else {
-        //        [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+		//        [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 		NSLog(@"%@.hasPendingOperation = NO", [self class]);
 	}
 
@@ -86,36 +85,33 @@
 
 	NSString	*callbackId		= [command.arguments objectAtIndex:0];
 	NSString	*objectAtIndex0 = [command.arguments objectAtIndex:0];
-    
+
 	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
 	CDVPluginResult		*result;
-   
-    
-    //[self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+
+	// [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 
 	if ([objectAtIndex0 isEqualToString:@"success"]) {
 		NSString *jsString = k___FILEBASENAME___INIT;
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___INIT was evaluated by webview!"];
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
-	} else { NSLog(@"[command.arguments objectAtIndex:0] = %@",[command.arguments objectAtIndex:0]);}
-    
+	} else {NSLog(@"[command.arguments objectAtIndex:0] = %@", [command.arguments objectAtIndex:0]); }
 }
 
-- (void)nativeFunctionWithAlert:(CDVInvokedUrlCommand*)command
+- (void)nativeFunctionWithAlert:(CDVInvokedUrlCommand *)command
 {
 	NSLog(@"nativeFunctionWithAlert called from %@!", [self class]);
 
-    if (self.hasPendingOperation) {
+	if (self.hasPendingOperation) {
 		NSLog(@"%@.hasPendingOperation = YES", [self class]);
 	} else {
-        //  [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+		//  [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 		NSLog(@"%@.hasPendingOperation = NO", [self class]);
 	}
-    
-    //[self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 
-    
+	// [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+
 	NSString	*callbackId		= [command.arguments objectAtIndex:0];
 	NSString	*objectAtIndex0 = [command.arguments objectAtIndex:0];
 
@@ -127,37 +123,36 @@
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___ALERT was evaluated by webview and created alert!"];
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
-	} else { NSLog(@"[command.arguments objectAtIndex:0] = %@",[command.arguments objectAtIndex:0]);}
+	} else {NSLog(@"[command.arguments objectAtIndex:0] = %@", [command.arguments objectAtIndex:0]); }
 }
-- (void)nativeFunction:(CDVInvokedUrlCommand*)command
+
+- (void)nativeFunction:(CDVInvokedUrlCommand *)command
 {
 	NSLog(@"nativeFunction called from %@!", [self class]);
-    
-    if (self.hasPendingOperation) {
-        
-        //[self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+
+	if (self.hasPendingOperation) {
+		// [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 		NSLog(@"%@.hasPendingOperation = YES", [self class]);
 	} else {
-        //[self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+		// [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
 		NSLog(@"%@.hasPendingOperation = NO", [self class]);
 	}
-    
-    [self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!");}];
+
+	[self.commandDelegate runInBackground:^{NSLog(@"BackGround Thread sample code!"); }];
 
 	NSString	*callbackId		= [command.arguments objectAtIndex:0];
 	NSString	*objectAtIndex0 = [command.arguments objectAtIndex:0];
-    
+
 	CDVViewController	*mvc___FILEBASENAME___ = (CDVViewController *)[super viewController];
 	CDVPluginResult		*result;
-    
+
 	if ([objectAtIndex0 isEqualToString:@"literalString"]) {
 		NSString *jsString = k___FILEBASENAME___FUNCTION;
 		[mvc___FILEBASENAME___.webView stringByEvaluatingJavaScriptFromString:jsString];
 		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Success! const k___FILEBASENAME___FUNCTION was evaluated by webview!"];
 		[self writeJavascript:[result toSuccessCallbackString:callbackId]];
-	} else { NSLog(@"[command.arguments objectAtIndex:0] = %@",[command.arguments objectAtIndex:0]);}
+	} else {NSLog(@"[command.arguments objectAtIndex:0] = %@", [command.arguments objectAtIndex:0]); }
 }
-
 
 - (void)handleOpenURL:(NSNotification *)notification
 {
