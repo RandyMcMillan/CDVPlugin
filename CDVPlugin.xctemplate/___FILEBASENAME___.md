@@ -7,14 +7,25 @@ ___FILEBASENAME___
   Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 
 
+Cordova 3.0.0 Notes
+
+Add this to your app config.xml
+
+    <feature name="___FILEBASENAME___">
+        <param name="ios-package" value="___FILEBASENAME___"/>
+    </feature>
+
+
 
 * Add`<script type="text/javascript" charset="utf-8" src="___FILEBASENAME___.js"></script>`to your www/index.html
 
+###Deprecated
 * Add Cordova.plist values
 
 | Key | Type | Value |
 | ------------ |---| ------------- |
 | ___FILEBASENAME___ | String | ___FILEBASENAME___ |
+
 
 [Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVPlugin.xctemplate/index.html)
 

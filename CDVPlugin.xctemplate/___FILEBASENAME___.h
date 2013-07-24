@@ -24,14 +24,34 @@
  *     Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
  */
 
+//http://docs.phonegap.com/en/2.8.0/guide_plugin-development_ios_index.md.html#Developing%20a%20Plugin%20on%20iOS
+
+
+/*
+ 
+ - (void)myMethod:(CDVInvokedUrlCommand*)command
+ {
+ CDVPluginResult* pluginResult = nil;
+ NSString* myarg = [command.arguments objectAtIndex:0];
+ 
+ if (myarg != nil) {
+ pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+ } else {
+ pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+ }
+ [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+ }
+ 
+ 
+*/
 #import <Foundation/Foundation.h>
 
 #import <Cordova/CDVPlugin.h>
 
 @interface ___FILEBASENAME___ : CDVPlugin {}
 
-- (void)init:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)nativeFunctionWithAlert:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)nativeFunction:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+- (void)init:(CDVInvokedUrlCommand*)command;
+- (void)nativeFunctionWithAlert:(CDVInvokedUrlCommand*)command;
+- (void)nativeFunction:(CDVInvokedUrlCommand*)command;
 
 @end
