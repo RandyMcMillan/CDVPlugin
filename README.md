@@ -1,4 +1,4 @@
-CDVPlugin
+DVPlugin (Updated to Cordova 3.0.0 07/24/2013)
 ===
 
 Cordova (iOS) Xcode Plugin Template
